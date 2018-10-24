@@ -1,0 +1,73 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1 {
+	// opacity: 1;
+
+	#super{
+		@include pos(42, 114);
+		// @include pos(58, 107);
+		// @include pos-scale(42, 114, .5);
+		line-height: 34px;
+		color: green;
+		letter-spacing: 0.4px;
+
+		#t1.dash{
+			margin-right: -1px;
+			margin-left: -5px;
+		}
+
+		#t5.dash{
+			margin-right: -5px;
+			margin-left: 1px;
+		}
+
+			
+	}
+}
+
+#grey{
+	@include pos(0, 0);
+}
+
+#bg{
+	// opacity: .3;
+	@include pos-scale(-53, -41, 0.5);
+	// @include pos-scale(27, -181, 0.5);
+}
+
+
+#end{
+	// color: red;
+	text-align: center;
+	font-size: 15px;
+
+	line-height: 29px;
+	@include pos(30, 33);
+}
+
+.clipmask{
+	// width: 122px;
+
+	// background-color: green;
+	clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+#logo{
+	@include pos-scale(26, 96, .5);
+}
+
+
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 300px;
+	height: 250px;
+}
+
