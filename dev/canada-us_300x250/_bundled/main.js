@@ -31,7 +31,7 @@ function start() {
 		TweenMax.set(item.dom, { clip: 'rect(0px,' + w + 'px,' + h + 'px,0px)' });
 	}
 
-	var maskTime = 1;
+	var maskTime = .85;
 
 	var tl = new TimelineMax();
 	var tl2 = new TimelineMax();

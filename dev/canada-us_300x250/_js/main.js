@@ -31,7 +31,7 @@ function start() {
 
 	
 
-	const maskTime = 1
+	const maskTime = .85
 
 	const tl = new TimelineMax()
 	const tl2 = new TimelineMax()
