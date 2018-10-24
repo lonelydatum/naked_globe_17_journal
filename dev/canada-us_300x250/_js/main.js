@@ -44,13 +44,13 @@ function start() {
 
 	tl.to("#bg", 2, {x:"+=50", y:"-=50", opacity:0}, "+=1")
 	
-	tl.from(["#t0"], .5, {opacity:0})
+	tl.from(["#t0"], .5, {opacity:0}, '-=1.4')
 	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5"], .5, {opacity:0}, "+=.1")
 	tl.from(["#t6"], .5, {opacity:0})
 
 	// return
 	
-	tl.add("t4", "+=1.9")
+	tl.add("t4", "+=2")
 	tl.to("#t4", maskTime*gar["t4"].percent, {...hide}, "t4")
 	tl.to("#t5", maskTime*gar["t4"].percent, {x:`-=${gar.t4.width}`}, "t4")
 	tl.to("#t6", maskTime*gar["t4"].percent, {x:`-=${gar.t4.width}`}, "t4")
