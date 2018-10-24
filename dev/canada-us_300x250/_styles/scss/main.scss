@@ -8,12 +8,41 @@
 	// opacity: 1;
 
 	#super{
+		width: 100%;
+		height: 100%;
 		@include pos(42, 114);
 		// @include pos(58, 107);
 		// @include pos-scale(42, 114, .5);
 		line-height: 34px;
 		color: green;
 		letter-spacing: 0.4px;
+		
+		#t0{
+			@include pos(0, 0);
+		}
+
+		#t1{
+			@include pos(108, 0);
+		}
+		#t2{
+			@include pos(114, 1);
+		}
+
+		#t3{
+			@include pos(0, 35);
+		}
+
+		#t4{
+			@include pos(0, 68);
+		}
+
+		#t5{
+			@include pos(101, 68);
+		}
+
+		#t6{
+			@include pos(109, 68);
+		}
 
 		#t1.dash{
 			margin-right: -1px;
@@ -50,9 +79,22 @@
 }
 
 .clipmask{
+	// background-color: red;
+	// opacity: .6;
+	display: block;
 	// background-color: blue;
-	-webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+	// -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+	// -moz-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+	// clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
 	
+	
+}
+
+.hide{
+	// transition: .8s ease-out;
+	// -webkit-clip-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+	// -moz-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+	// clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 }
 
 

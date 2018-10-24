@@ -121,7 +121,7 @@ img {
 }
 
 p {
-  display: inline-block;
+  display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -169,6 +169,8 @@ sup {
 }
 
 .frame1 #super {
+  width: 100%;
+  height: 100%;
   -webkit-transform: translate(42px, 114px);
   -ms-transform: translate(42px, 114px);
   transform: translate(42px, 114px);
@@ -180,6 +182,83 @@ sup {
   line-height: 34px;
   color: green;
   letter-spacing: 0.4px;
+}
+
+.frame1 #super #t0 {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.frame1 #super #t1 {
+  -webkit-transform: translate(108px, 0px);
+  -ms-transform: translate(108px, 0px);
+  transform: translate(108px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.frame1 #super #t2 {
+  -webkit-transform: translate(114px, 1px);
+  -ms-transform: translate(114px, 1px);
+  transform: translate(114px, 1px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.frame1 #super #t3 {
+  -webkit-transform: translate(0px, 35px);
+  -ms-transform: translate(0px, 35px);
+  transform: translate(0px, 35px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.frame1 #super #t4 {
+  -webkit-transform: translate(0px, 68px);
+  -ms-transform: translate(0px, 68px);
+  transform: translate(0px, 68px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.frame1 #super #t5 {
+  -webkit-transform: translate(101px, 68px);
+  -ms-transform: translate(101px, 68px);
+  transform: translate(101px, 68px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.frame1 #super #t6 {
+  -webkit-transform: translate(109px, 68px);
+  -ms-transform: translate(109px, 68px);
+  transform: translate(109px, 68px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
 }
 
 .frame1 #super #t1.dash {
@@ -229,7 +308,7 @@ sup {
 }
 
 .clipmask {
-  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  display: block;
 }
 
 #logo {

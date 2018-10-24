@@ -23,7 +23,12 @@ function start() {
 	}
 
 	for (var key in gar) {
-		gar[key].percent = gar[key].length / max;
+		var item = gar[key];
+		item.percent = item.length / max;
+		var w = item.dom.offsetWidth;
+		var h = item.dom.offsetHeight;
+		void 0;
+		TweenMax.set(item.dom, { clip: 'rect(0px,' + w + 'px,' + h + 'px,0px)' });
 	}
 
 	var maskTime = 1;
@@ -31,7 +36,7 @@ function start() {
 	var tl = new TimelineMax();
 	var tl2 = new TimelineMax();
 
-	var hide = { webkitClipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' };
+	var hide = { clip: 'rect(0px,' + 0 + 'px,' + 50 + 'px,0px)' };
 
 	tl.set(".frame1", { opacity: 1 });
 
@@ -39,34 +44,39 @@ function start() {
 
 	tl.from("#super", .3, { opacity: 0 }, "-=1.5");
 
-	tl.add("t4", "+=1.5");
+	tl.add("t4", "+=1.9");
 	tl.to("#t4", maskTime * gar["t4"].percent, _extends({}, hide), "t4");
 	tl.to("#t5", maskTime * gar["t4"].percent, { x: '-=' + gar.t4.width }, "t4");
 	tl.to("#t6", maskTime * gar["t4"].percent, { x: '-=' + gar.t4.width }, "t4");
-	tl.set("#t5", { x: 120, y: -35 });
-	tl.set("#t6", { x: 120, y: -35 });
+
+	// tl.gotoAndPlay("t4")
+
+	tl.set("#t5", { x: 222, y: 34 });
+	tl.set("#t6", { x: 222 + 6, y: 34 });
 
 	tl.add("t3");
 	tl.to("#t3", maskTime * gar["t3"].percent, _extends({}, hide), "t3");
 	tl.to("#t5", maskTime * gar["t3"].percent, { x: '-=' + gar.t3.width }, "t3");
 	tl.to("#t6", maskTime * gar["t3"].percent, { x: '-=' + gar.t3.width }, "t3");
 
-	tl.set("#t5", { x: 103, y: -68 });
-	tl.set("#t6", { x: 103, y: -68 });
+	tl.set("#t5", { x: 208, y: 0 });
+	tl.set("#t6", { x: 208 + 6, y: 0 });
 
 	tl.add("t2");
 	tl.to("#t2", maskTime * gar["t2"].percent, _extends({}, hide), "t2");
 	tl.to("#t5", maskTime * gar["t2"].percent, { x: '-=' + gar.t2.width, opacity: 0 }, "t2");
 	tl.to("#t6", maskTime * gar["t2"].percent, { x: '-=' + (gar.t2.width + 15) }, "t2");
 	tl.to("#t1", maskTime * gar["t2"].percent, { opacity: 0 }, "t2");
-	// tl.to("#super", 2, {x:58, y:107}, "t4")
+	tl.to("#super", 2, { x: 58, y: 107 }, "t4");
 
 	tl.add("logo", "+=.1");
 	tl.to("#super", .5, { x: 95 }, "logo");
 	tl.from("#logo", .5, { opacity: 0, x: "-=10" }, "logo+=.2");
 
 	tl.add("end");
-	tl.to("#super", .5, { x: 75, y: 176, scale: .8 }, "end");
+	tl.to("#super", .5, { x: 75, y: 162, scale: .8 }, "end");
+	tl.to(["#t0", "#t6"], .5, { color: 'black' }, "end");
+
 	tl.to("#logo", .5, { x: 50, y: 178, scale: .4 }, "end");
 
 	tl.from("#cta", .5, { y: "-=50", opacity: 0 }, "end+=.5");
