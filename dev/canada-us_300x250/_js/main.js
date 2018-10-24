@@ -28,7 +28,7 @@ function start() {
 	const tl = new TimelineMax()
 	const tl2 = new TimelineMax()
 	
-	const hide = {clipPath:`polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)`}
+	const hide = {webkitClipPath:`polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)`}
 
 
 	tl.set(".frame1", {opacity:1})
@@ -37,8 +37,8 @@ function start() {
 	tl.to("#bg", 2, {x:"+=50", y:"-=50", opacity:0}, "+=1")
 	
 	tl.from("#super", .3, {opacity:0}, "-=1.5")
-	tl.add("t4", "+=2")
-
+	
+	tl.add("t4", "+=1.5")
 	tl.to("#t4", maskTime*gar["t4"].percent, {...hide}, "t4")
 	tl.to("#t5", maskTime*gar["t4"].percent, {x:`-=${gar.t4.width}`}, "t4")
 	tl.to("#t6", maskTime*gar["t4"].percent, {x:`-=${gar.t4.width}`}, "t4")
@@ -76,6 +76,9 @@ function start() {
 	
 
 }
+
+
+// TweenMax.to('#t4', 1, {webkitClipPath:`polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)`})
 
 
 

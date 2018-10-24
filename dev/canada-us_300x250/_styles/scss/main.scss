@@ -50,10 +50,9 @@
 }
 
 .clipmask{
-	// width: 122px;
-
-	// background-color: green;
-	clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+	// background-color: blue;
+	-webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+	
 }
 
 
