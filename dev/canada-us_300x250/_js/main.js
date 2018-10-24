@@ -44,7 +44,11 @@ function start() {
 
 	tl.to("#bg", 2, {x:"+=50", y:"-=50", opacity:0}, "+=1")
 	
-	tl.from("#super", .3, {opacity:0}, "-=1.5")
+	tl.from(["#t0"], .5, {opacity:0})
+	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5"], .5, {opacity:0}, "+=.1")
+	tl.from(["#t6"], .5, {opacity:0})
+
+	// return
 	
 	tl.add("t4", "+=1.9")
 	tl.to("#t4", maskTime*gar["t4"].percent, {...hide}, "t4")
