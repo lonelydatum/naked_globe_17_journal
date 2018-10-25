@@ -76,10 +76,11 @@ function start() {
 
 	_commonJsCommonJs.tl.add("t4", "+=2");
 	_commonJsCommonJs.tl.to("#t6 span", .3, { opacity: 0, left: "-=100%" }, 't4-=.4');
+	_commonJsCommonJs.tl.set("#t5", { x: "-=5" });
 	tweenMask(_commonJsCommonJs.gar["t4"]);
 
-	_commonJsCommonJs.tl.set("#t5", { x: 222, y: 34 });
-	_commonJsCommonJs.tl.set("#t6", { x: 222 + 6, y: 34 });
+	_commonJsCommonJs.tl.set("#t5", { x: 222 - 4, y: 34 });
+	// tl.set("#t6", {x:222+6, y:34})
 
 	_commonJsCommonJs.tl.add("t3");
 	tweenMask(_commonJsCommonJs.gar["t3"]);

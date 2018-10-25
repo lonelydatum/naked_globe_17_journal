@@ -22,10 +22,11 @@ function start() {
 	
 	tl.add("t4", "+=2")
 	tl.to("#t6 span", .3, {opacity:0, left:"-=100%"}, 't4-=.4')
+	tl.set("#t5", {x:"-=5"})
 	tweenMask(gar["t4"])
 	
-	tl.set("#t5", {x:222, y:34})
-	tl.set("#t6", {x:222+6, y:34})
+	tl.set("#t5", {x:222-4, y:34})
+	// tl.set("#t6", {x:222+6, y:34})
 
 	tl.add("t3")
 	tweenMask(gar["t3"])
