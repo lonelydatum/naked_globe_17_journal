@@ -2,7 +2,7 @@ TweenLite.defaultEase = Power3.easeOut
 
 const tl = new TimelineMax()
 const hide = {clip:`rect(0px,${0}px,${50}px,0px)`}
-const maskTime = .6
+const maskTime = .4
 const gar = {}
 
 function init(){
@@ -46,7 +46,7 @@ function start() {
 	init()
 	
 	tl.set(".frame1", {opacity:1})
-
+	tl.set("#super", {x:60, y:283}, "t4")
 	tl.to("#bg", 2, {x:-220, y:-128}, "+=.5")
 
 	
@@ -76,7 +76,7 @@ function start() {
 	tl.to("#t5", maskTime*gar["t2"].percent, {x:`-=${gar.t2.width}`, opacity:0}, "t2")
 	tl.to("#t6", maskTime*gar["t2"].percent, {x:`-=${gar.t2.width+15}`}, "t2")
 	tl.to("#t1", maskTime*gar["t2"].percent, {opacity:0}, "t2")
-	tl.to("#super", 1, {x:60, y:283}, "t4")
+	// tl.to("#super", 1, {x:60, y:283}, "t4")
 
 	
 
@@ -89,10 +89,10 @@ function start() {
 
 
 	tl.add("end", "+=1")
-	tl.to("#super", .5, {x:75, y:436, scale:.8}, "end")
+	tl.to("#super", .5, {x:75, y:436-20, scale:.8}, "end")
 	tl.to(["#t0", "#t6"], .5, {color:'black'}, "end")
 
-	tl.to("#logo", .5, {x:50, y:487, scale:.4}, "end")
+	tl.to("#logo", .5, {x:50, y:487-20, scale:.4}, "end")
 	
 	
 	tl.from("#cta", .5, {y:"-=50", opacity:0}, "end+=.5")

@@ -7,7 +7,7 @@ TweenLite.defaultEase = Power3.easeOut;
 
 var tl = new TimelineMax();
 var hide = { clip: 'rect(0px,' + 0 + 'px,' + 50 + 'px,0px)' };
-var maskTime = .6;
+var maskTime = .4;
 var gar = {};
 
 function init() {
@@ -50,7 +50,7 @@ function start() {
 
 	tl.set(".frame1", { opacity: 1 });
 
-	tl.to("#bg", 2, { x: "+=50", y: "-=50", opacity: 0 }, "+=.5");
+	tl.to("#bg", 2, { x: "+=50", y: "-=50", opacity: 1 }, "+=.5");
 
 	tl.from(["#t0"], .5, { opacity: 0 }, '-=1.4');
 	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5"], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
