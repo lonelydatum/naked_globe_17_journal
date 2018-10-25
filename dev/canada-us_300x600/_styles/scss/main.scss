@@ -1,0 +1,104 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1 {
+	// opacity: 1;
+
+	#super{
+		width: 100%;
+		height: 100%;
+		@include pos(42, 437);
+		// @include pos(60, 283);
+		// @include pos(95, 283);
+		// @include pos-scale(75, 436, .8);
+		line-height: 34px;
+		color: green;
+		letter-spacing: 0.4px;
+		
+		#t0{
+			@include pos(0, 0);
+		}
+
+		#t1{
+			@include pos(108, 0);
+		}
+		#t2{
+			@include pos(114, 1);
+		}
+
+		#t3{
+			@include pos(0, 35);
+		}
+
+		#t4{
+			@include pos(0, 68);
+		}
+
+		#t5{
+			@include pos(101, 68);
+		}
+
+		#t6{
+			@include pos(109, 68);
+		}
+
+		#t1.dash{
+			margin-right: -1px;
+			margin-left: -5px;
+		}
+
+		#t5.dash{
+			margin-right: -5px;
+			margin-left: 1px;
+		}
+
+			
+	}
+}
+
+#grey{
+	@include pos(0, 0);
+	height: 100%;
+}
+
+#bg{
+	// opacity: .3;
+	@include pos-scale(-200, 212, 0.7);
+	// @include pos-scale(-200, 22, 0.7);
+	// @include pos-scale(-200, -128, 0.7);
+}
+
+
+#end{
+	// color: red;
+	text-align: center;
+	font-size: 15px;
+
+	line-height: 29px;
+	@include pos(30, 122);
+}
+
+.clipmask{
+	display: block;	
+}
+
+
+
+#logo{
+	@include pos-scale(26, 272, .5);
+	// @include pos-scale(50, 487, 0.4);
+}
+
+
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 300px;
+	height: 600px;
+}
+

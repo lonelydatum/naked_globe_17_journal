@@ -33,7 +33,7 @@ function init() {
 		item.percent = item.length / max;
 		var w = item.dom.offsetWidth;
 		var h = item.dom.offsetHeight;
-		void 0;
+		console.log(item.dom);
 		TweenMax.set(item.dom, { clip: 'rect(0px,' + w + 'px,' + h + 'px,0px)' });
 	}
 }
@@ -50,9 +50,9 @@ function start() {
 
 	tl.set(".frame1", { opacity: 1 });
 
-	tl.to("#bg", 2, { x: "+=50", y: "-=50", opacity: 0 }, "+=.5");
+	tl.to("#bg", 2, { x: -220, y: -128 }, "+=.5");
 
-	tl.from(["#t0"], .5, { opacity: 0 }, '-=1.4');
+	tl.from(["#t0"], .5, { opacity: 0 }, '-=1');
 	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5"], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
 	tl.from(["#t6"], .5, { opacity: 0, ease: Sine.easeOut });
 
@@ -73,20 +73,23 @@ function start() {
 	tl.to("#t5", maskTime * gar["t2"].percent, { x: '-=' + gar.t2.width, opacity: 0 }, "t2");
 	tl.to("#t6", maskTime * gar["t2"].percent, { x: '-=' + (gar.t2.width + 15) }, "t2");
 	tl.to("#t1", maskTime * gar["t2"].percent, { opacity: 0 }, "t2");
-	tl.to("#super", 1.5, { x: 58, y: 107 }, "t4");
+	tl.to("#super", 1, { x: 60, y: 283 }, "t4");
 
 	tl.add("logo", "+=.1");
-	tl.to("#super", .5, { x: 95 }, "logo");
+	tl.to("#super", .5, { x: 95, y: 283 }, "logo");
 	tl.from("#logo", .5, { opacity: 0, x: "-=10" }, "logo+=.2");
+	tl.to("#bg", .5, { y: -358, opacity: 0 }, "logo");
 
 	tl.add("end", "+=1");
-	tl.to("#super", .5, { x: 75, y: 162, scale: .8 }, "end");
+	tl.to("#super", .5, { x: 75, y: 436, scale: .8 }, "end");
 	tl.to(["#t0", "#t6"], .5, { color: 'black' }, "end");
 
-	tl.to("#logo", .5, { x: 50, y: 178, scale: .4 }, "end");
+	tl.to("#logo", .5, { x: 50, y: 487, scale: .4 }, "end");
 
 	tl.from("#cta", .5, { y: "-=50", opacity: 0 }, "end+=.5");
 	tl.from("#end", .5, { y: "-=50", opacity: 0 }, "end+=.7");
+
+	// tl.gotoAndPlay("t4")
 }
 
 start();
