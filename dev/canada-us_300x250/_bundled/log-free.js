@@ -78,6 +78,7 @@ function start() {
 	tl.add("logo", "+=.1");
 	tl.to("#super", .5, { x: 95 }, "logo");
 	tl.from("#logo", .5, { opacity: 0, x: "-=10" }, "logo+=.2");
+	tl.to(["#bg", "#grey"], 2, { opacity: 0 }, "logo-=2");
 
 	tl.add("end", "+=1");
 	tl.to("#super", .5, { x: 75, y: 162, scale: .8 }, "end");
