@@ -259,6 +259,12 @@ sup {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   position: absolute;
+  overflow: hidden;
+}
+
+.frame1 #super #t6 span {
+  left: 0px;
+  position: relative;
 }
 
 .frame1 #super #t1.dash {
@@ -296,10 +302,10 @@ sup {
 #end {
   text-align: center;
   font-size: 15px;
-  line-height: 29px;
-  -webkit-transform: translate(30px, 33px);
-  -ms-transform: translate(30px, 33px);
-  transform: translate(30px, 33px);
+  line-height: 24px;
+  -webkit-transform: translate(30px, 37px);
+  -ms-transform: translate(30px, 37px);
+  transform: translate(30px, 37px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;

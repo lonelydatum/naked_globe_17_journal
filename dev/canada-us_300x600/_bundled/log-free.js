@@ -1,13 +1,17 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+Object.defineProperty(exports, '__esModule', {
+	value: true
+});
+var banner = document.getElementById('banner');
+var size = { w: banner.offsetWidth, h: banner.offsetHeight };
 
-TweenLite.defaultEase = Power3.easeOut;
+TweenLite.defaultEase = Power2.easeOut;
 
 var tl = new TimelineMax();
 var hide = { clip: 'rect(0px,' + 0 + 'px,' + 50 + 'px,0px)' };
-var maskTime = .3;
+var maskTime = .4;
 var gar = {};
 
 function init() {
@@ -38,63 +42,79 @@ function init() {
 	}
 }
 
+exports.size = size;
+exports.tl = tl;
+exports.init = init;
+exports.hide = hide;
+exports.gar = gar;
+exports.maskTime = maskTime;
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _commonJsCommonJs = require('../../_common/js/common.js');
+
 function tweenMask(item) {
-	var time = maskTime * item.percent;
-	tl.to(item.dom, maskTime, _extends({}, hide), item.id);
-	tl.to("#t5", maskTime, { x: '-=' + item.width }, item.id);
-	tl.to("#t6", maskTime, { x: '-=' + item.width }, item.id);
+	var time = _commonJsCommonJs.maskTime * item.percent;
+	_commonJsCommonJs.tl.to(item.dom, _commonJsCommonJs.maskTime, _extends({}, _commonJsCommonJs.hide), item.id);
+	_commonJsCommonJs.tl.to("#t5", _commonJsCommonJs.maskTime, { x: "-=" + item.width }, item.id);
+	// tl.to("#t6", maskTime, {x:`-=${item.width}`}, item.id)
 }
 
 function start() {
-	init();
+	(0, _commonJsCommonJs.init)();
 
-	tl.set(".frame1", { opacity: 1 });
-	tl.set("#super", { y: 283 }, "t4");
-	tl.to("#bg", 2, { x: -220, y: -128 }, "+=.5");
+	_commonJsCommonJs.tl.set(".frame1", { opacity: 1 });
+	_commonJsCommonJs.tl.set("#super", { y: 283 }, "t4");
+	_commonJsCommonJs.tl.to("#bg", 2, { x: -220, y: -128 }, "+=.5");
 
-	tl.from(["#t0"], .5, { opacity: 0 }, '-=1');
-	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5", '#t6'], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
+	_commonJsCommonJs.tl.from(["#t0"], .5, { opacity: 0 }, '-=1');
+	_commonJsCommonJs.tl.from(["#t1", "#t2", "#t3", "#t4", "#t5", '#t6'], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
 
-	tl.add("t4", "+=2");
-	tweenMask(gar["t4"]);
+	_commonJsCommonJs.tl.add("t4", "+=2");
+	_commonJsCommonJs.tl.to("#t6 span", .3, { opacity: 0, left: "-=100%" }, 't4-=.4');
+	tweenMask(_commonJsCommonJs.gar["t4"]);
 
-	tl.set("#t5", { x: 222, y: 34 });
-	tl.set("#t6", { x: 222 + 6, y: 34 });
+	_commonJsCommonJs.tl.set("#t5", { x: 222, y: 34 });
+	_commonJsCommonJs.tl.set("#t6", { x: 222 + 6, y: 34 });
 
-	tl.add("t3");
-	tweenMask(gar["t3"]);
+	_commonJsCommonJs.tl.add("t3");
+	tweenMask(_commonJsCommonJs.gar["t3"]);
 
-	tl.set("#t5", { x: 208, y: 0 });
-	tl.set("#t6", { x: 208 + 6, y: 0 });
+	_commonJsCommonJs.tl.set("#t5", { x: 208, y: 0 });
+	_commonJsCommonJs.tl.set("#t6", { x: 108, y: 0 });
 
-	tl.add("t2");
-	tl.to("#t2", maskTime * gar["t2"].percent, _extends({}, hide), "t2");
-	tl.to("#t5", maskTime * gar["t2"].percent, { x: '-=' + gar.t2.width, opacity: 0 }, "t2");
-	tl.to("#t6", maskTime * gar["t2"].percent, { x: '-=' + (gar.t2.width + 15) }, "t2");
-	tl.to("#t1", maskTime * gar["t2"].percent, { opacity: 0 }, "t2");
+	_commonJsCommonJs.tl.add("t2");
+	_commonJsCommonJs.tl.to("#t2", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, _extends({}, _commonJsCommonJs.hide), "t2");
+	_commonJsCommonJs.tl.to("#t5", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { x: "-=" + _commonJsCommonJs.gar.t2.width, opacity: 0 }, "t2");
+	// tl.to("#t6", maskTime*gar["t2"].percent, {x:`-=${gar.t2.width+15}`}, "t2")
+	_commonJsCommonJs.tl.to("#t1", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { opacity: 0 }, "t2");
 	// tl.to("#super", 1, {x:60, y:283}, "t4")
+	_commonJsCommonJs.tl.to("#t6 span", .4, { opacity: 1, left: 0 }, 't2+=.3');
 
-	tl.add("logo", "+=.1");
-	tl.to("#super", .5, { x: 95, y: 283 }, "logo");
-	tl.from("#logo", .5, { opacity: 0, x: "-=10" }, "logo+=.2");
-	tl.to(["#bg"], 2, { opacity: 0 }, "logo-=2");
-	tl.to(["#grey"], .5, { opacity: 0 }, "-=1");
+	_commonJsCommonJs.tl.add("logo");
+	_commonJsCommonJs.tl.to("#super", .5, { x: 95, y: 283 }, "logo");
+	_commonJsCommonJs.tl.from("#logo", .5, { opacity: 0, x: "-=10" }, "logo+=.2");
+	_commonJsCommonJs.tl.to(["#bg"], 2, { opacity: 0 }, "logo-=2");
+	_commonJsCommonJs.tl.to(["#grey"], .5, { opacity: 0 }, "-=1");
 
-	tl.add("end", "+=1");
-	tl.to("#super", .7, { x: 73, y: 436 - 20, scale: .8 }, "end");
-	tl.to(["#t0", "#t6"], .7, { color: 'black' }, "end");
+	_commonJsCommonJs.tl.add("end", "+=1");
+	_commonJsCommonJs.tl.to("#super", .7, { x: 73, y: 436 - 80, scale: .8 }, "end");
+	_commonJsCommonJs.tl.to(["#t0", "#t6"], .7, { color: 'black' }, "end");
 
-	tl.to("#logo", .7, { x: 53, y: 487 - 20, scale: .4 }, "end");
+	_commonJsCommonJs.tl.to("#logo", .7, { x: 53, y: 487 - 80, scale: .4 }, "end");
 
-	tl.from("#cta", .5, { y: "-=50", opacity: 0 }, "end+=.5");
-	tl.from("#end", .5, { y: "-=50", opacity: 0 }, "end+=.7");
+	_commonJsCommonJs.tl.from("#cta", .5, { y: "-=50", opacity: 0 }, "end+=.5");
+	_commonJsCommonJs.tl.from("#end", .5, { y: "-=50", opacity: 0 }, "end+=.7");
 
 	// tl.gotoAndPlay("t4")
 }
 
 start();
 
-},{}]},{},[1])
+},{"../../_common/js/common.js":1}]},{},[2])
 
 
 //# sourceMappingURL=main.js.map

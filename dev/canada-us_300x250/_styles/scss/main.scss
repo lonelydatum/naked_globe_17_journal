@@ -42,6 +42,11 @@
 
 		#t6{
 			@include pos(109, 68);
+			overflow: hidden;
+			span{
+				left:0px;
+				position: relative;
+			}
 		}
 
 		#t1.dash{
@@ -74,8 +79,8 @@
 	text-align: center;
 	font-size: 15px;
 
-	line-height: 29px;
-	@include pos(30, 33);
+	line-height: 24px;
+	@include pos(30, 37);
 }
 
 .clipmask{
