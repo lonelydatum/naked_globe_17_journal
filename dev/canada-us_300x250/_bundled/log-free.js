@@ -7,7 +7,7 @@ TweenLite.defaultEase = Power3.easeOut;
 
 var tl = new TimelineMax();
 var hide = { clip: 'rect(0px,' + 0 + 'px,' + 50 + 'px,0px)' };
-var maskTime = .4;
+var maskTime = .3;
 var gar = {};
 
 function init() {
@@ -53,8 +53,8 @@ function start() {
 	tl.to("#bg", 2, { x: "+=50", y: "-=50", opacity: 1 }, "+=.5");
 
 	tl.from(["#t0"], .5, { opacity: 0 }, '-=1.4');
-	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5"], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
-	tl.from(["#t6"], .5, { opacity: 0, ease: Sine.easeOut });
+	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5", '#t6'], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
+	// tl.from(["#t6"], .5, {opacity:0, ease:Sine.easeOut})
 
 	tl.add("t4", "+=2");
 	tweenMask(gar["t4"]);
@@ -73,11 +73,11 @@ function start() {
 	tl.to("#t5", maskTime * gar["t2"].percent, { x: '-=' + gar.t2.width, opacity: 0 }, "t2");
 	tl.to("#t6", maskTime * gar["t2"].percent, { x: '-=' + (gar.t2.width + 15) }, "t2");
 	tl.to("#t1", maskTime * gar["t2"].percent, { opacity: 0 }, "t2");
-	tl.to("#super", 1.5, { x: 58, y: 107 }, "t4");
+	tl.to("#super", 1, { x: 58, y: 107 }, "t4");
 
-	tl.add("logo", "+=.1");
+	tl.add("logo");
 	tl.to("#super", .5, { x: 95 }, "logo");
-	tl.from("#logo", .5, { opacity: 0, x: "-=10" }, "logo+=.2");
+	tl.from("#logo", .5, { opacity: 0, x: "-=10" }, "logo");
 	tl.to(["#bg", "#grey"], 2, { opacity: 0 }, "logo-=2");
 
 	tl.add("end", "+=1");

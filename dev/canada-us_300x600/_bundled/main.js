@@ -7,7 +7,7 @@ TweenLite.defaultEase = Power3.easeOut;
 
 var tl = new TimelineMax();
 var hide = { clip: 'rect(0px,' + 0 + 'px,' + 50 + 'px,0px)' };
-var maskTime = .4;
+var maskTime = .3;
 var gar = {};
 
 function init() {
@@ -49,12 +49,11 @@ function start() {
 	init();
 
 	tl.set(".frame1", { opacity: 1 });
-	tl.set("#super", { x: 60, y: 283 }, "t4");
+	tl.set("#super", { y: 283 }, "t4");
 	tl.to("#bg", 2, { x: -220, y: -128 }, "+=.5");
 
 	tl.from(["#t0"], .5, { opacity: 0 }, '-=1');
-	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5"], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
-	tl.from(["#t6"], .5, { opacity: 0, ease: Sine.easeOut });
+	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5", '#t6'], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
 
 	tl.add("t4", "+=2");
 	tweenMask(gar["t4"]);
@@ -78,13 +77,14 @@ function start() {
 	tl.add("logo", "+=.1");
 	tl.to("#super", .5, { x: 95, y: 283 }, "logo");
 	tl.from("#logo", .5, { opacity: 0, x: "-=10" }, "logo+=.2");
-	tl.to(["#bg", "#grey"], 2, { opacity: 0 }, "logo-=2");
+	tl.to(["#bg"], 2, { opacity: 0 }, "logo-=2");
+	tl.to(["#grey"], .5, { opacity: 0 }, "-=1");
 
 	tl.add("end", "+=1");
-	tl.to("#super", .5, { x: 75, y: 436 - 20, scale: .8 }, "end");
-	tl.to(["#t0", "#t6"], .5, { color: 'black' }, "end");
+	tl.to("#super", .7, { x: 73, y: 436 - 20, scale: .8 }, "end");
+	tl.to(["#t0", "#t6"], .7, { color: 'black' }, "end");
 
-	tl.to("#logo", .5, { x: 50, y: 487 - 20, scale: .4 }, "end");
+	tl.to("#logo", .7, { x: 53, y: 487 - 20, scale: .4 }, "end");
 
 	tl.from("#cta", .5, { y: "-=50", opacity: 0 }, "end+=.5");
 	tl.from("#end", .5, { y: "-=50", opacity: 0 }, "end+=.7");
