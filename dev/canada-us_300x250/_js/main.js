@@ -16,8 +16,8 @@ function start() {
 	tl.to("#bg", 2, {x:"+=50", y:"-=50", opacity:1}, "+=.5")
 	
 	tl.from(["#t0"], .5, {opacity:0}, '-=1.4')
-	tl.from(["#t1", "#t2", "#t3", "#t4", "#t5", '#t6'], .9, {opacity:0, ease:Sine.easeOut}, "-=.4")
-	// tl.from(["#t6"], .5, {opacity:0, ease:Sine.easeOut})
+	tl.from(["#t1", "#t2", "#t3", "#t4"], .9, {opacity:0, ease:Sine.easeOut}, "-=.4")
+	tl.from(["#t5", "#t6"], .5, {opacity:0, ease:Sine.easeOut}, '-=.2')
 
 	
 	tl.add("t4", "+=2")
