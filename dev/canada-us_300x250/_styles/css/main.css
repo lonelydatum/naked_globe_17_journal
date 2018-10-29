@@ -172,6 +172,10 @@ sup {
   color: black;
 }
 
+.frame1 {
+  opacity: 0;
+}
+
 .frame1 #super {
   width: 100%;
   height: 100%;

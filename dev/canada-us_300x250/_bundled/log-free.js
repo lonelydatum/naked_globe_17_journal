@@ -35,7 +35,7 @@ function init() {
 	for (var key in gar) {
 		var item = gar[key];
 		item.percent = item.length / max;
-		var w = item.dom.offsetWidth;
+		var w = item.dom.offsetWidth + 20;
 		var h = item.dom.offsetHeight;
 		void 0;
 		TweenMax.set(item.dom, { clip: 'rect(0px,' + w + 'px,' + h + 'px,0px)' });
@@ -104,6 +104,8 @@ function start() {
 }
 
 start();
+
+// init()
 
 },{"../../_common/js/common.js":1}]},{},[2])
 

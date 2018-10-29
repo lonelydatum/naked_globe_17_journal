@@ -32,7 +32,7 @@ function init(){
 	for(let key in gar){
 		const item = gar[key]
 		item.percent = item.length / max
-		const w = item.dom.offsetWidth
+		const w = item.dom.offsetWidth+20
 		const h = item.dom.offsetHeight
 		console.log(item.dom);
 		TweenMax.set(item.dom, {clip: `rect(0px,${w}px,${h}px,0px)`})
