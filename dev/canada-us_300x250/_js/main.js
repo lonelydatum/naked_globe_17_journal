@@ -59,6 +59,6 @@ function start() {
 }
 
 
-// start()
+start()
 
 
