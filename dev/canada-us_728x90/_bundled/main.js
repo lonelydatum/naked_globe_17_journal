@@ -102,7 +102,7 @@ function start() {
 	_commonJsCommonJs.tl.to(["#logo", "#super"], .3, { opacity: 1 }, "+=.2");
 }
 
-start();
+setTimeout(start, 200);
 
 },{"../../_common/js/common.js":1}]},{},[2])
 

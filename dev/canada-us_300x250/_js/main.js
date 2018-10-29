@@ -59,7 +59,7 @@ function start() {
 }
 
 
-start()
+setTimeout(start, 200)
 
 // init()
 

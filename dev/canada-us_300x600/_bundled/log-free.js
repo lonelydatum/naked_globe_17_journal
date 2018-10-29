@@ -104,7 +104,7 @@ function start() {
 	_commonJsCommonJs.tl.from("#end", .5, { y: "-=50", opacity: 0 }, "end+=.7");
 }
 
-start();
+setTimeout(start, 200);
 
 },{"../../_common/js/common.js":1}]},{},[2])
 
