@@ -160,6 +160,10 @@ sup {
   font-style: normal;
 }
 
+#super {
+  font-size: 20px;
+}
+
 .red {
   color: #c62421;
 }
@@ -319,7 +323,6 @@ sup {
 }
 
 #banner {
-  font-size: 20px;
   color: #333;
   width: 728px;
   height: 90px;

@@ -10,6 +10,7 @@
 	#super{
 		width: 100%;
 		height: 100%;
+		
 		@include pos(22, 21);
 		// @include pos(273, 37);
 		// @include pos(309, 37);
@@ -91,7 +92,7 @@
 
 
 #banner{
-	font-size: 20px;
+	
 	color: #333;
 	width: 728px;
 	height: 90px;
