@@ -1,0 +1,99 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1 {
+	// opacity: 1;
+
+	#super{
+		width: 100%;
+		height: 100%;
+		@include pos(22, 21);
+		// @include pos(273, 37);
+		// @include pos(309, 37);
+		// @include pos-scale(489, 31, 0.8);
+		
+		
+		letter-spacing: 0.4px;
+		
+		#t0{
+			@include pos(0, 0);
+		}
+
+		#t1{
+			@include pos(105, 0);
+		}
+		#t2{
+			@include pos(114, 1);
+		}
+
+		#t3{
+			@include pos(0, 30);
+		}
+
+		#t4{
+			@include pos(0, 0);
+		}
+
+		#t5{
+			@include pos(190, 30);
+		}
+
+		#t6{
+			@include pos(198, 30);
+			overflow: hidden;
+			span{
+				left:0px;
+				position: relative;
+			}
+		}
+
+		
+	}
+}
+
+
+
+#grey{
+	@include pos(0, 0);
+	width: 100%;
+	height:100%;
+}
+
+#bg{	
+	// opacity: .5;
+	@include pos-scale-rotate(154, -49, 0.5, 0);
+	// @include pos-scale-rotate(458, -27, 0.25, 0);
+}
+
+
+#end{
+	text-align: center;
+	font-size: 15px;
+	line-height: 24px;
+	@include pos(19, 12);
+}
+
+.clipmask{
+	display: block;
+}
+
+
+
+#logo{
+	@include pos-scale(241, 18, .5);
+	// @include pos-scale(505, 25, 0.4);
+}
+
+
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 728px;
+	height: 90px;
+}
+

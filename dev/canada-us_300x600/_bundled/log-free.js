@@ -60,7 +60,6 @@ function tweenMask(item) {
 	var time = _commonJsCommonJs.maskTime * item.percent;
 	_commonJsCommonJs.tl.to(item.dom, _commonJsCommonJs.maskTime, _extends({}, _commonJsCommonJs.hide), item.id);
 	_commonJsCommonJs.tl.to("#t5", _commonJsCommonJs.maskTime, { x: "-=" + item.width }, item.id);
-	// tl.to("#t6", maskTime, {x:`-=${item.width}`}, item.id)
 }
 
 function start() {
@@ -78,13 +77,10 @@ function start() {
 	_commonJsCommonJs.tl.to("#t6 span", .3, { opacity: 0, left: "-=100%" }, 't4-=.4');
 	_commonJsCommonJs.tl.set("#t5", { x: "-=5" });
 	tweenMask(_commonJsCommonJs.gar["t4"]);
-
 	_commonJsCommonJs.tl.set("#t5", { x: 222 - 4, y: 34 });
-	// tl.set("#t6", {x:222+6, y:34})
 
 	_commonJsCommonJs.tl.add("t3");
 	tweenMask(_commonJsCommonJs.gar["t3"]);
-
 	_commonJsCommonJs.tl.set("#t5", { x: 208, y: 0 });
 	_commonJsCommonJs.tl.set("#t6", { x: 108, y: 0 });
 
@@ -103,13 +99,9 @@ function start() {
 	_commonJsCommonJs.tl.add("end", "+=1");
 	_commonJsCommonJs.tl.to("#super", .7, { x: 73, y: 436 - 80, scale: .8 }, "end");
 	_commonJsCommonJs.tl.to(["#t0", "#t6"], .7, { color: 'black' }, "end");
-
 	_commonJsCommonJs.tl.to("#logo", .7, { x: 53, y: 487 - 80, scale: .4 }, "end");
-
 	_commonJsCommonJs.tl.from("#cta", .5, { y: "-=50", opacity: 0 }, "end+=.5");
 	_commonJsCommonJs.tl.from("#end", .5, { y: "-=50", opacity: 0 }, "end+=.7");
-
-	// tl.gotoAndPlay("t4")
 }
 
 start();

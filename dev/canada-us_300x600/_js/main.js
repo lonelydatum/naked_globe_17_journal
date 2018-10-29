@@ -4,7 +4,6 @@ function tweenMask(item){
 	const time = maskTime * item.percent
 	tl.to(item.dom, maskTime, {...hide}, item.id)
 	tl.to("#t5", maskTime, {x:`-=${item.width}`}, item.id)
-	// tl.to("#t6", maskTime, {x:`-=${item.width}`}, item.id)
 }
 
 function start() {
@@ -25,17 +24,15 @@ function start() {
 	tl.add("t4", "+=2")
 	tl.to("#t6 span", .3, {opacity:0, left:"-=100%"}, 't4-=.4')
 	tl.set("#t5", {x:"-=5"})
-	tweenMask(gar["t4"])
-	
+	tweenMask(gar["t4"])	
 	tl.set("#t5", {x:222-4, y:34})
-	// tl.set("#t6", {x:222+6, y:34})
+
+
 
 	tl.add("t3")
-	tweenMask(gar["t3"])
-	
+	tweenMask(gar["t3"])	
 	tl.set("#t5", {x:208, y:0})
 	tl.set("#t6", {x:108, y:0})
-
 
 
 
@@ -46,7 +43,6 @@ function start() {
 	tl.to("#t6 span", .4, {opacity:1, left:0}, 't2+=.3')
 
 	
-
 
 	tl.add("logo")
 	tl.to("#super", .5, {x:95, y:283}, "logo")
@@ -59,15 +55,10 @@ function start() {
 	tl.add("end", "+=1")
 	tl.to("#super", .7, {x:73, y:436-80, scale:.8}, "end")
 	tl.to(["#t0", "#t6"], .7, {color:'black'}, "end")
-
 	tl.to("#logo", .7, {x:53, y:487-80, scale:.4}, "end")
-	
-	
 	tl.from("#cta", .5, {y:"-=50", opacity:0}, "end+=.5")
 	tl.from("#end", .5, {y:"-=50", opacity:0}, "end+=.7")
-
-	// tl.gotoAndPlay("t4")
-
+	
 }
 
 

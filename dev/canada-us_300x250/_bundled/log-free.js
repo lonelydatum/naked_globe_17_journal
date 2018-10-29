@@ -60,14 +60,12 @@ function tweenMask(item) {
 	var time = _commonJsCommonJs.maskTime * item.percent;
 	_commonJsCommonJs.tl.to(item.dom, _commonJsCommonJs.maskTime, _extends({}, _commonJsCommonJs.hide), item.id);
 	_commonJsCommonJs.tl.to("#t5", _commonJsCommonJs.maskTime, { x: "-=" + item.width }, item.id);
-	// tl.to("#t6", maskTime, {x:`-=${item.width}`}, item.id)
 }
 
 function start() {
 	(0, _commonJsCommonJs.init)();
 
 	_commonJsCommonJs.tl.set(".frame1", { opacity: 1 });
-
 	_commonJsCommonJs.tl.to("#bg", 2, { x: "+=50", y: "-=50", opacity: 1 }, "+=.5");
 
 	_commonJsCommonJs.tl.from(["#t0"], .5, { opacity: 0 }, '-=1.4');
@@ -78,25 +76,19 @@ function start() {
 	_commonJsCommonJs.tl.to("#t6 span", .3, { opacity: 0, left: "-=100%" }, 't4-=.4');
 	_commonJsCommonJs.tl.set("#t5", { x: "-=5" });
 	tweenMask(_commonJsCommonJs.gar["t4"]);
-
 	_commonJsCommonJs.tl.set("#t5", { x: 222 - 4, y: 34 });
-	// tl.set("#t6", {x:222+6, y:34})
 
 	_commonJsCommonJs.tl.add("t3");
 	tweenMask(_commonJsCommonJs.gar["t3"]);
-
 	_commonJsCommonJs.tl.set("#t5", { x: 208, y: 0 });
 	_commonJsCommonJs.tl.set("#t6", { x: 107, y: 0 });
 
 	_commonJsCommonJs.tl.add("t2");
 	_commonJsCommonJs.tl.to("#t2", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, _extends({}, _commonJsCommonJs.hide), "t2");
 	_commonJsCommonJs.tl.to("#t5", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { x: "-=" + _commonJsCommonJs.gar.t2.width, opacity: 0 }, "t2");
-	// tl.to("#t6", maskTime*gar["t2"].percent, {x:`-=${gar.t2.width+15}`}, "t2")
 	_commonJsCommonJs.tl.to("#t1", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { opacity: 0 }, "t2");
 	_commonJsCommonJs.tl.to("#super", 1, { x: 58, y: 107 }, "t4");
 	_commonJsCommonJs.tl.to("#t6 span", .4, { opacity: 1, left: 0 }, 't2+=.3');
-
-	// return
 
 	_commonJsCommonJs.tl.add("logo");
 	_commonJsCommonJs.tl.to("#super", .5, { x: 95 }, "logo");
@@ -106,9 +98,7 @@ function start() {
 	_commonJsCommonJs.tl.add("end", "+=1");
 	_commonJsCommonJs.tl.to("#super", .5, { x: 75, y: 162, scale: .8 }, "end");
 	_commonJsCommonJs.tl.to(["#t0", "#t6"], .5, { color: 'black' }, "end");
-
 	_commonJsCommonJs.tl.to("#logo", .5, { x: 50, y: 178, scale: .4 }, "end");
-
 	_commonJsCommonJs.tl.from("#cta", .5, { y: "-=50", opacity: 0 }, "end+=.5");
 	_commonJsCommonJs.tl.from("#end", .5, { y: "-=50", opacity: 0 }, "end+=.7");
 }
