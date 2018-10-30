@@ -31,8 +31,8 @@ function start() {
 
 	
 
-	tl.set("#t6", {x:107, y:0}, "out")
-	tl.set("#t6 span", {left:"-100%"}, "out")
+	tl.set("#t6", {x:107, y:0})
+	tl.set("#t6 span", {left:"-100%"})
 	
 
 

@@ -77,8 +77,8 @@ function start() {
 	_commonJsCommonJs.tl.add("out", "+=2");
 	_commonJsCommonJs.tl.to([".clipmask", "#t5", "#t6"], .3, { opacity: 0, ease: Sine.easeOut }, 'out');
 
-	_commonJsCommonJs.tl.set("#t6", { x: 107, y: 0 }, "out");
-	_commonJsCommonJs.tl.set("#t6 span", { left: "-100%" }, "out");
+	_commonJsCommonJs.tl.set("#t6", { x: 107, y: 0 });
+	_commonJsCommonJs.tl.set("#t6 span", { left: "-100%" });
 
 	_commonJsCommonJs.tl.add("in", "+=.3");
 	_commonJsCommonJs.tl.to("#t6", .5, { opacity: 1 }, "in");
