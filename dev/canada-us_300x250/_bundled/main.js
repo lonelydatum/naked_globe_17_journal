@@ -107,7 +107,7 @@ function start() {
 
 	_commonJsCommonJs.tl.add("logo");
 	_commonJsCommonJs.tl.to("#super", .5, { x: 95 }, "logo");
-	_commonJsCommonJs.tl.from("#logo", .5, { opacity: 0, x: "-=10" }, "logo");
+	_commonJsCommonJs.tl.from("#logo", .5, { opacity: 0 }, "logo+=.3");
 	_commonJsCommonJs.tl.to(["#bg", "#grey"], 1.5, { opacity: 0 }, "logo-=2");
 
 	_commonJsCommonJs.tl.add("end", "+=1");

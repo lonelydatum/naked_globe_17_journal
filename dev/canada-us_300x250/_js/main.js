@@ -63,7 +63,7 @@ function start() {
 
 	tl.add("logo")
 	tl.to("#super", .5, {x:95}, "logo")
-	tl.from("#logo", .5, {opacity:0, x:"-=10"}, "logo")
+	tl.from("#logo", .5, {opacity:0}, "logo+=.3")
 	tl.to(["#bg", "#grey"], 1.5, {opacity:0}, "logo-=2")
 
 
