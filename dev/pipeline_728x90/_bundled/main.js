@@ -98,10 +98,8 @@ function start() {
 	_commonJsCommonJs.tl.set("#logo", { x: 505, y: 25, scale: .4 }, "end");
 	_commonJsCommonJs.tl.to(["#t0", "#t6"], .5, { color: 'black' }, "end");
 
-	_commonJsCommonJs.tl.from("#cta", .5, { opacity: 0 }, "end+=.5");
-	_commonJsCommonJs.tl.from("#end", .5, { opacity: 0 }, "end+=.7");
-
-	_commonJsCommonJs.tl.to(["#logo", "#super"], .3, { opacity: 1 }, "+=.2");
+	_commonJsCommonJs.tl.from(["#cta", "#end"], .7, { opacity: 0 }, "end");
+	_commonJsCommonJs.tl.to(["#logo", "#super"], .7, { opacity: 1 }, "end");
 }
 
 setTimeout(start, 200);

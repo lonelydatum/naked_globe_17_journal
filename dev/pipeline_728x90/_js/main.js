@@ -52,10 +52,12 @@ function start() {
 	tl.set("#logo", {x:505, y:25, scale:.4}, "end")
 	tl.to(["#t0", "#t6"], .5, {color:'black'}, "end")
 	
-	tl.from("#cta", .5, {opacity:0}, "end+=.5")
-	tl.from("#end", .5, {opacity:0}, "end+=.7")
+	
 
-	tl.to(["#logo", "#super"], .3, {opacity:1}, "+=.2")
+	tl.from([ "#cta", "#end"], .7, {opacity:0}, "end")
+	tl.to([ "#logo", "#super"], .7, {opacity:1}, "end")
+
+
 
 }
 
