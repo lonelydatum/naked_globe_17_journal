@@ -26,15 +26,22 @@ function start() {
 	
 
 	tl.add("out", "+=2")
-	tl.to([".clipmask",  "#t5"], .35, {opacity:0, ease:Sine.easeOut}, 'out')
+	tl.to([".clipmask",  "#t5", "#t6"], .3, {opacity:0, ease:Sine.easeOut}, 'out')
+
+
+	
 
 	tl.set("#t6", {x:107, y:0}, "out")
 	tl.set("#t6 span", {left:"-100%"}, "out")
 	
 
-	tl.add("in", "+=1")
+
+	tl.add("in", "+=.3")
+	tl.to("#t6", .5, {opacity:1}, "in")
 	tl.to("#t6 span", .5, {left:"0%"}, "in")
 	tl.to(["#t1"], .2, {opacity:0}, '-=.2')
+
+
 
 	// tl.from("#t6 span", .4, {left:"-100%"}, "matters+=1")
 	// tl.to("#t6", .4, {opacity:1}, "matters")
