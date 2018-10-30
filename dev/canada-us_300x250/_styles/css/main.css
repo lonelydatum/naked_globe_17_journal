@@ -204,9 +204,9 @@ sup {
 }
 
 .frame1 #super #t1 {
-  -webkit-transform: translate(108px, 0px);
-  -ms-transform: translate(108px, 0px);
-  transform: translate(108px, 0px);
+  -webkit-transform: translate(110px, 0px);
+  -ms-transform: translate(110px, 0px);
+  transform: translate(110px, 0px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
@@ -248,9 +248,9 @@ sup {
 }
 
 .frame1 #super #t5 {
-  -webkit-transform: translate(101px, 68px);
-  -ms-transform: translate(101px, 68px);
-  transform: translate(101px, 68px);
+  -webkit-transform: translate(98px, 68px);
+  -ms-transform: translate(98px, 68px);
+  transform: translate(98px, 68px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
