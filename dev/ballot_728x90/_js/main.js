@@ -31,20 +31,20 @@ function start() {
 	tl.add("in", "+=.3")
 	tl.to("#t6", .5, {opacity:1}, "in")
 	tl.to("#t6 span", .5, {left:"0%"}, "in")
-	tl.to(["#t1"], .2, {opacity:0}, '-=.2')
+	tl.to(["#bg", "#grey"], 1, {opacity:0, x:"+=20"}, "in")
+	tl.to(["#t1"], .2, {opacity:0}, 'in')
 
-
-
-	tl.to("#super", 1, {x:309, y:37}, "out")
-
-	tl.to("#t6 span", .4, {opacity:1, left:0}, 'out+=.5')
-	tl.to(["#bg", "#grey"], 1, {opacity:0, x:"+=20"}, "out")
-	tl.from("#logo", .5, {opacity:0}, "out+=.7")
-
-
+	tl.to("#super", 1, {x:309, y:37}, "+=1")
+	tl.from("#logo", .5, {opacity:0})
+	
+	
 	
 
+
+
 	tl.to(["#logo", "#super"], .3, {opacity:0}, "+=1")
+
+
 
 
 

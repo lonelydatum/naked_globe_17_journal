@@ -80,13 +80,11 @@ function start() {
 	_commonJsCommonJs.tl.add("in", "+=.3");
 	_commonJsCommonJs.tl.to("#t6", .5, { opacity: 1 }, "in");
 	_commonJsCommonJs.tl.to("#t6 span", .5, { left: "0%" }, "in");
-	_commonJsCommonJs.tl.to(["#t1"], .2, { opacity: 0 }, '-=.2');
+	_commonJsCommonJs.tl.to(["#bg", "#grey"], 1, { opacity: 0, x: "+=20" }, "in");
+	_commonJsCommonJs.tl.to(["#t1"], .2, { opacity: 0 }, 'in');
 
-	_commonJsCommonJs.tl.to("#super", 1, { x: 309, y: 37 }, "out");
-
-	_commonJsCommonJs.tl.to("#t6 span", .4, { opacity: 1, left: 0 }, 'out+=.5');
-	_commonJsCommonJs.tl.to(["#bg", "#grey"], 1, { opacity: 0, x: "+=20" }, "out");
-	_commonJsCommonJs.tl.from("#logo", .5, { opacity: 0 }, "out+=.7");
+	_commonJsCommonJs.tl.to("#super", 1, { x: 309, y: 37 }, "+=1");
+	_commonJsCommonJs.tl.from("#logo", .5, { opacity: 0 });
 
 	_commonJsCommonJs.tl.to(["#logo", "#super"], .3, { opacity: 0 }, "+=1");
 
@@ -98,6 +96,8 @@ function start() {
 
 	_commonJsCommonJs.tl.from(["#cta", "#end"], .7, { opacity: 0 }, "end");
 	_commonJsCommonJs.tl.to(["#logo", "#super"], .7, { opacity: 1 }, "end");
+
+	// tl.gotoAndPlay("out")
 }
 
 setTimeout(start, 200);
