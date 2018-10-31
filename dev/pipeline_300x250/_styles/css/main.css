@@ -175,9 +175,9 @@ sup {
 .frame1 #super {
   width: 100%;
   height: 100%;
-  -webkit-transform: translate(40px, 116px);
-  -ms-transform: translate(40px, 116px);
-  transform: translate(40px, 116px);
+  -webkit-transform: translate(42px, 108px);
+  -ms-transform: translate(42px, 108px);
+  transform: translate(42px, 108px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;

@@ -52,15 +52,7 @@ exports.maskTime = maskTime;
 },{}],2:[function(require,module,exports){
 "use strict";
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _commonJsCommonJs = require('../../_common/js/common.js');
-
-function tweenMask(item) {
-	var time = _commonJsCommonJs.maskTime * item.percent;
-	_commonJsCommonJs.tl.to(item.dom, _commonJsCommonJs.maskTime, _extends({}, _commonJsCommonJs.hide), item.id);
-	_commonJsCommonJs.tl.to("#t5", _commonJsCommonJs.maskTime, { x: "-=" + item.width }, item.id);
-}
 
 function start() {
 	(0, _commonJsCommonJs.init)();
@@ -73,22 +65,15 @@ function start() {
 	_commonJsCommonJs.tl.from(["#t1", "#t2", "#t3", "#t4"], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
 	_commonJsCommonJs.tl.from(["#t5", "#t6"], .5, { opacity: 0, ease: Sine.easeOut }, '-=.2');
 
-	_commonJsCommonJs.tl.add("t4", "+=2");
-	_commonJsCommonJs.tl.to("#t6 span", .3, { opacity: 0, left: "-=100%" }, 't4-=.4');
-	_commonJsCommonJs.tl.set("#t5", { x: "-=5" });
-	tweenMask(_commonJsCommonJs.gar["t4"]);
-	_commonJsCommonJs.tl.set("#t5", { x: 222 - 4, y: 34 });
+	_commonJsCommonJs.tl.add("out", "+=2");
+	_commonJsCommonJs.tl.to([".clipmask", "#t5", "#t6"], .3, { opacity: 0, ease: Sine.easeOut }, 'out');
+	_commonJsCommonJs.tl.set("#t6", { x: 107, y: 0 });
+	_commonJsCommonJs.tl.set("#t6 span", { left: "-100%" });
 
-	_commonJsCommonJs.tl.add("t3");
-	tweenMask(_commonJsCommonJs.gar["t3"]);
-	_commonJsCommonJs.tl.set("#t5", { x: 208, y: 0 });
-	_commonJsCommonJs.tl.set("#t6", { x: 108, y: 0 });
-
-	_commonJsCommonJs.tl.add("t2");
-	_commonJsCommonJs.tl.to("#t2", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, _extends({}, _commonJsCommonJs.hide), "t2");
-	_commonJsCommonJs.tl.to("#t5", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { x: "-=" + _commonJsCommonJs.gar.t2.width, opacity: 0 }, "t2");
-	_commonJsCommonJs.tl.to("#t1", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { opacity: 0 }, "t2");
-	_commonJsCommonJs.tl.to("#t6 span", .4, { opacity: 1, left: 0 }, 't2+=.3');
+	_commonJsCommonJs.tl.add("in", "+=.3");
+	_commonJsCommonJs.tl.to("#t6", .5, { opacity: 1 }, "in");
+	_commonJsCommonJs.tl.to("#t6 span", .5, { left: "0%" }, "in");
+	_commonJsCommonJs.tl.to(["#t1"], .2, { opacity: 0 }, '-=.2');
 
 	_commonJsCommonJs.tl.add("logo");
 	_commonJsCommonJs.tl.to("#super", .5, { x: 95, y: 283 }, "logo");

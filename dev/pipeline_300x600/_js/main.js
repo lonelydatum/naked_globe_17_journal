@@ -11,7 +11,7 @@ function start() {
 	
 	tl.set(".frame1", {opacity:1})
 	tl.set("#super", {y:283}, "t4")
-	tl.to("#bg", 2, {x:0, y:-265}, "+=.5")
+	tl.to("#bg", 2, {x:0, y:-271}, "+=.5")
 
 	
 	
@@ -20,27 +20,20 @@ function start() {
 	tl.from(["#t5", "#t6"], .5, {opacity:0, ease:Sine.easeOut}, '-=.2')
 	
 
+
+	tl.add("out", "+=2")
+	tl.to([".clipmask",  "#t5", "#t6"], .3, {opacity:0, ease:Sine.easeOut}, 'out')
+	tl.set("#t6", {x:107, y:0})
+	tl.set("#t6 span", {left:"-100%"})
 	
-	tl.add("t4", "+=2.4")
-	tl.to("#t6 span", .3, {opacity:0, left:"-=100%"}, 't4-=.4')
-	tl.set("#t5", {x:"-=5"})
-	tweenMask(gar["t4"])	
-	tl.set("#t5", {x:180, y:35})
-
-	// return
-
-	tl.add("t3")
-	tweenMask(gar["t3"])	
-	tl.set("#t5", {x:208, y:0})
-	tl.set("#t6", {x:108, y:0})
 
 
+	tl.add("in", "+=.3")
+	tl.to("#t6", .5, {opacity:1}, "in")
+	tl.to("#t6 span", .5, {left:"0%"}, "in")
+	tl.to(["#t1"], .2, {opacity:0}, '-=.2')
 
-	tl.add("t2")	
-	tl.to("#t2", maskTime*gar["t2"].percent, {...hide}, "t2")
-	tl.to("#t5", maskTime*gar["t2"].percent, {x:`-=${gar.t2.width}`, opacity:0}, "t2")	
-	tl.to("#t1", maskTime*gar["t2"].percent, {opacity:0}, "t2")	
-	tl.to("#t6 span", .4, {opacity:1, left:0}, 't2+=.3')
+
 
 	
 

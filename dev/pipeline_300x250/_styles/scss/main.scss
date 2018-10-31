@@ -10,9 +10,8 @@
 	#super{
 		width: 100%;
 		height: 100%;
-		@include pos(40, 116);
-		// @include pos(58, 107);
-		// @include pos-scale(42, 114, .5);
+		@include pos(42, 108);
+		
 		line-height: 34px;
 		color: green;
 		letter-spacing: 0.4px;

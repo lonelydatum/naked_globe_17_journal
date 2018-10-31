@@ -66,29 +66,27 @@ function start() {
 	(0, _commonJsCommonJs.init)();
 
 	_commonJsCommonJs.tl.set(".frame1", { opacity: 1 });
-	_commonJsCommonJs.tl.to("#bg", 1.5, { x: 220, opacity: 1 }, "+=.5");
+	_commonJsCommonJs.tl.to("#bg", 1.5, { x: 220, opacity: 1 }, "+=.8");
 
 	_commonJsCommonJs.tl.from(["#t0"], .5, { opacity: 0 }, '-=1');
 	_commonJsCommonJs.tl.from(["#t1", "#t2", "#t3", "#t4"], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
 	_commonJsCommonJs.tl.from(["#t5", "#t6"], .5, { opacity: 0, ease: Sine.easeOut }, '-=.2');
 
-	_commonJsCommonJs.tl.add("t3", "+=2");
-	_commonJsCommonJs.tl.to("#t6 span", .3, { opacity: 0, left: "-=100%" }, 't3-=.4');
-	tweenMask(_commonJsCommonJs.gar["t3"]);
-	_commonJsCommonJs.tl.set("#t5", { x: 335, y: 0 });
+	_commonJsCommonJs.tl.add("out", "+=2");
+	_commonJsCommonJs.tl.to([".clipmask", "#t5", "#t6"], .3, { opacity: 0, ease: Sine.easeOut }, 'out');
 	_commonJsCommonJs.tl.set("#t6", { x: 107, y: 0 });
+	_commonJsCommonJs.tl.set("#t6 span", { left: "-100%" });
 
-	// return
+	_commonJsCommonJs.tl.add("in", "+=.3");
+	_commonJsCommonJs.tl.to("#t6", .5, { opacity: 1 }, "in");
+	_commonJsCommonJs.tl.to("#t6 span", .5, { left: "0%" }, "in");
+	_commonJsCommonJs.tl.to(["#t1"], .2, { opacity: 0 }, '-=.2');
 
-	_commonJsCommonJs.tl.add("t2", "+=0");
-	_commonJsCommonJs.tl.to("#t2", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, _extends({}, _commonJsCommonJs.hide), "t2");
-	_commonJsCommonJs.tl.to("#t5", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { x: "-=" + _commonJsCommonJs.gar.t2.width, opacity: 0 }, "t2");
-	_commonJsCommonJs.tl.to("#t1", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { opacity: 0 }, "t2");
-	_commonJsCommonJs.tl.to("#super", 1, { x: 309, y: 37 }, "t2");
+	_commonJsCommonJs.tl.to("#super", 1, { x: 309, y: 37 }, "out");
 
-	_commonJsCommonJs.tl.to("#t6 span", .4, { opacity: 1, left: 0 }, 't2+=.5');
-	_commonJsCommonJs.tl.to(["#bg", "#grey"], 1, { opacity: 0, x: "+=20" }, "t2");
-	_commonJsCommonJs.tl.from("#logo", .5, { opacity: 0 }, "t2+=.7");
+	_commonJsCommonJs.tl.to("#t6 span", .4, { opacity: 1, left: 0 }, 'out+=.5');
+	_commonJsCommonJs.tl.to(["#bg", "#grey"], 1, { opacity: 0, x: "+=20" }, "out");
+	_commonJsCommonJs.tl.from("#logo", .5, { opacity: 0 }, "out+=.7");
 
 	_commonJsCommonJs.tl.to(["#logo", "#super"], .3, { opacity: 0 }, "+=1");
 

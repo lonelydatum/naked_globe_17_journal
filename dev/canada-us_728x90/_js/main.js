@@ -21,23 +21,30 @@ function start() {
 
 
 
-	tl.add("t3", "+=2")
-	tl.to("#t6 span", .3, {opacity:0, left:"-=100%"}, 't3-=.4')
-	tweenMask(gar["t3"])	
-	tl.set("#t5", {x:345, y:0})
+	tl.add("out", "+=2")
+	tl.to([".clipmask",  "#t5", "#t6"], .3, {opacity:0, ease:Sine.easeOut}, 'out')
 	tl.set("#t6", {x:107, y:0})
-
+	tl.set("#t6 span", {left:"-100%"})
 	
 
-	tl.add("t2", "+=0")	
-	tl.to("#t2", maskTime*gar["t2"].percent, {...hide}, "t2")
-	tl.to("#t5", maskTime*gar["t2"].percent, {x:`-=${gar.t2.width}`, opacity:0}, "t2")
-	tl.to("#t1", maskTime*gar["t2"].percent, {opacity:0}, "t2")
-	tl.to("#super", 1, {x:309, y:37}, "t2")
 
-	tl.to("#t6 span", .4, {opacity:1, left:0}, 't2+=.5')
-	tl.to(["#bg", "#grey"], 1, {opacity:0, x:"+=20"}, "t2")
-	tl.from("#logo", .5, {opacity:0}, "t2+=.7")
+	tl.add("in", "+=.3")
+	tl.to("#t6", .5, {opacity:1}, "in")
+	tl.to("#t6 span", .5, {left:"0%"}, "in")
+	tl.to(["#t1"], .2, {opacity:0}, '-=.2')
+
+
+
+	tl.to("#super", 1, {x:309, y:37}, "out")
+
+	tl.to("#t6 span", .4, {opacity:1, left:0}, 'out+=.5')
+	tl.to(["#bg", "#grey"], 1, {opacity:0, x:"+=20"}, "out")
+	tl.from("#logo", .5, {opacity:0}, "out+=.7")
+
+
+
+
+
 
 
 	tl.to(["#logo", "#super"], .3, {opacity:0}, "+=1")

@@ -73,22 +73,15 @@ function start() {
 	_commonJsCommonJs.tl.from(["#t1", "#t2", "#t3", "#t4"], .9, { opacity: 0, ease: Sine.easeOut }, "-=.4");
 	_commonJsCommonJs.tl.from(["#t5", "#t6"], .5, { opacity: 0, ease: Sine.easeOut }, '-=.2');
 
-	_commonJsCommonJs.tl.add("t4", "+=2.4");
-	_commonJsCommonJs.tl.to("#t6 span", .3, { opacity: 0, left: "-=100%" }, 't4-=.4');
-	_commonJsCommonJs.tl.set("#t5", { x: "-=5" });
-	tweenMask(_commonJsCommonJs.gar["t4"]);
-	_commonJsCommonJs.tl.set("#t5", { x: 228, y: 33 });
+	_commonJsCommonJs.tl.add("out", "+=2");
+	_commonJsCommonJs.tl.to([".clipmask", "#t5", "#t6"], .3, { opacity: 0, ease: Sine.easeOut }, 'out');
+	_commonJsCommonJs.tl.set("#t6", { x: 107, y: 0 });
+	_commonJsCommonJs.tl.set("#t6 span", { left: "-100%" });
 
-	_commonJsCommonJs.tl.add("t3");
-	tweenMask(_commonJsCommonJs.gar["t3"]);
-	_commonJsCommonJs.tl.set("#t5", { x: 208, y: 0 });
-	_commonJsCommonJs.tl.set("#t6", { x: 108, y: 0 });
-
-	_commonJsCommonJs.tl.add("t2");
-	_commonJsCommonJs.tl.to("#t2", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, _extends({}, _commonJsCommonJs.hide), "t2");
-	_commonJsCommonJs.tl.to("#t5", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { x: "-=" + _commonJsCommonJs.gar.t2.width, opacity: 0 }, "t2");
-	_commonJsCommonJs.tl.to("#t1", _commonJsCommonJs.maskTime * _commonJsCommonJs.gar["t2"].percent, { opacity: 0 }, "t2");
-	_commonJsCommonJs.tl.to("#t6 span", .4, { opacity: 1, left: 0 }, 't2+=.3');
+	_commonJsCommonJs.tl.add("in", "+=.3");
+	_commonJsCommonJs.tl.to("#t6", .5, { opacity: 1 }, "in");
+	_commonJsCommonJs.tl.to("#t6 span", .5, { left: "0%" }, "in");
+	_commonJsCommonJs.tl.to(["#t1"], .2, { opacity: 0 }, '-=.2');
 
 	_commonJsCommonJs.tl.add("logo");
 	_commonJsCommonJs.tl.to("#super", .5, { x: 95, y: 283 }, "logo");
