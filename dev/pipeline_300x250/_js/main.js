@@ -11,7 +11,7 @@ function start() {
 	init()
 	
 	tl.set(".frame1", {opacity:1})
-	tl.to("#bg", 1, {y:-117}, "+=.5")
+	tl.to("#bg", 1, {y:-117}, "+=1.3")
 	
 	tl.from(["#t0"], .5, {opacity:0}, '-=.4')
 	tl.from(["#t1", "#t2", "#t3", "#t4"], .9, {opacity:0, ease:Sine.easeOut}, "-=0")

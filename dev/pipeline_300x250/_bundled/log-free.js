@@ -66,7 +66,7 @@ function start() {
 	(0, _commonJsCommonJs.init)();
 
 	_commonJsCommonJs.tl.set(".frame1", { opacity: 1 });
-	_commonJsCommonJs.tl.to("#bg", 1, { y: -117 }, "+=.5");
+	_commonJsCommonJs.tl.to("#bg", 1, { y: -117 }, "+=1.3");
 
 	_commonJsCommonJs.tl.from(["#t0"], .5, { opacity: 0 }, '-=.4');
 	_commonJsCommonJs.tl.from(["#t1", "#t2", "#t3", "#t4"], .9, { opacity: 0, ease: Sine.easeOut }, "-=0");
