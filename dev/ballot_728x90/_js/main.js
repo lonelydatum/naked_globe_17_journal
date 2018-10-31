@@ -34,7 +34,7 @@ function start() {
 	tl.to(["#bg", "#grey"], 1, {opacity:0, x:"+=20"}, "in")
 	tl.to(["#t1"], .2, {opacity:0}, 'in')
 
-	tl.to("#super", 1, {x:309, y:37}, "+=1")
+	tl.to("#super", 1, {x:309, y:37}, "+=0")
 	tl.from("#logo", .5, {opacity:0})
 	
 	

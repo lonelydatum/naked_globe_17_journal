@@ -83,7 +83,7 @@ function start() {
 	_commonJsCommonJs.tl.to(["#bg", "#grey"], 1, { opacity: 0, x: "+=20" }, "in");
 	_commonJsCommonJs.tl.to(["#t1"], .2, { opacity: 0 }, 'in');
 
-	_commonJsCommonJs.tl.to("#super", 1, { x: 309, y: 37 }, "+=1");
+	_commonJsCommonJs.tl.to("#super", 1, { x: 309, y: 37 }, "+=0");
 	_commonJsCommonJs.tl.from("#logo", .5, { opacity: 0 });
 
 	_commonJsCommonJs.tl.to(["#logo", "#super"], .3, { opacity: 0 }, "+=1");
