@@ -308,9 +308,9 @@ sup {
   text-align: center;
   font-size: 15px;
   line-height: 27px;
-  -webkit-transform: translate(30px, 122px);
-  -ms-transform: translate(30px, 122px);
-  transform: translate(30px, 122px);
+  -webkit-transform: translate(38px, 122px);
+  -ms-transform: translate(38px, 122px);
+  transform: translate(38px, 122px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
